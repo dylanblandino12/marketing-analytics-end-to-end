@@ -1,0 +1,6 @@
+-- =====================================
+-- File: 03_business_questions.sql
+-- Purpose: Answer key marketing business questions using SQL
+-- Dataset: Google Analytics Public Dataset
+-- Tool: Google BigQuery
+-- =====================================
