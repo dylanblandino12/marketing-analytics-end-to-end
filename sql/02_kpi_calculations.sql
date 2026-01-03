@@ -1,0 +1,6 @@
+-- =====================================
+-- File: 02_kpi_calculations.sql
+-- Purpose: Calculate core marketing KPIs for analysis and visualization
+-- Dataset: Google Analytics Public Dataset
+-- Tool: Google BigQuery
+-- =====================================
