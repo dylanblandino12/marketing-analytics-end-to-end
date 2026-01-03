@@ -1,0 +1,6 @@
+-- =====================================
+-- File: 01_exploration.sql
+-- Purpose: Perform initial data exploration and validation
+-- Dataset: Google Analytics Public Dataset
+-- Tool: Google BigQuery
+-- =====================================
