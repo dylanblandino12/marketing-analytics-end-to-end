@@ -1,0 +1,3 @@
+-- File: 00_schema_overview.sql
+-- Purpose: Describe dataset structure and join logic
+-- Dataset: Google Analytics Public Dataset (BigQuery)
