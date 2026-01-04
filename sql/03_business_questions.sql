@@ -72,4 +72,13 @@ ORDER BY total_events DESC;
 
 -- Q4: Which marketing channels should be deprioritized due to low impact?
 
+SELECT
+  s.channel_grouping,
+  ROUND(SAFE_DIVIDE(COUNT(DISTINCT t.transaction_id), COUNT(DISTINCT s.session_id)) * 100, 2) AS conversion_rate_pct,
+FROM `marketing_analytics.vw_sessions_base` s
+LEFT JOIN `marketing_analytics.vw_transactions` t 
+ON s.session_id = t.session_id
+GROUP BY s.channel_grouping
+ORDER BY conversion_rate_pct;
 
+-- Insight: Social drives high traffic volume but exhibits the lowest conversion efficiency and revenue impact, making it a clear candidate for deprioritization.
