@@ -44,6 +44,20 @@ FROM `marketing_analytics.vw_transactions`;
 
 -- Insight: The dataset includes 11,552 completed transactions, representing actual purchase events.
 
+-- =====================================
+-- Null User Validation
+-- =====================================
+
+-- Validate the presence of null user identifiers to ensure data integrity
+
+SELECT
+  COUNT(*) AS null_user_rows
+FROM `marketing_analytics.vw_sessions_base`
+WHERE fullVisitorId IS NULL;
+
+-- Insight:
+-- No sessions contain null user identifiers, confirming data completeness at the user level.
+
 
 -- =====================================
 -- Channel-Level Distribution Analysis
@@ -73,4 +87,35 @@ ORDER BY total_transactions_per_channel DESC;
 -- Referral and Organic Search generate the highest number of transactions, while Social drives high traffic but relatively few conversions.
 
 
+-- =====================================
+-- Device Category Distribution Analysis
+-- =====================================
+
+-- Analyze how sessions and transactions are distributed across device categories
+
+-- total sessiones per device
+
+SELECT 
+  device_category,
+  COUNT(*) AS total_sessions_per_device
+FROM `marketing_analytics.vw_sessions_base`
+GROUP BY device_category
+ORDER BY total_sessions_per_device DESC;
+
+-- Insight:
+-- Desktop accounts for the majority of sessions, followed by mobile, indicating desktop as the primary access device.
+
+-- total transactions per device
+
+SELECT
+  s.device_category,
+  COUNT(DISTINCT t.transaction_id) AS total_transactions_per_device
+FROM `marketing_analytics.vw_sessions_base` s
+JOIN `marketing_analytics.vw_transactions` t
+ON s.session_id = t.session_id
+GROUP BY s.device_category
+ORDER BY total_transactions_per_device DESC;
+
+-- Insight:
+-- Desktop drives most transactions, while mobile shows significantly lower conversion volume despite substantial traffic.
 
