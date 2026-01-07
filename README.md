@@ -1,25 +1,59 @@
 # marketing-analytics-end-to-end
 End-to-end marketing analytics project using SQL (BigQuery), Python, and Looker to analyze user behavior and conversion funnels.
 
+---
+
 ## Project Overview
-This project analyzes user behavior and marketing performance using the Google Analytics public dataset.  
-The analysis focuses on identifying high-value channels, conversion efficiency, and key drop-off points in the purchase funnel using SQL-based transformations and exploratory analysis.
 
-## Analysis Workflow
-- SQL (BigQuery): Data modeling, KPI calculations, and funnel analysis.
-- Python: Exploratory analysis and validation (in progress).
-- Looker: Data visualization and dashboarding (planned).
+This project demonstrates a complete analytics workflow, from raw data modeling
+to business insights. The analysis focuses on understanding how users progress
+through the conversion funnel and how different marketing channels perform in
+terms of efficiency and revenue contribution.
 
-## Business Questions
-- Which marketing channels generate the highest value per transaction?
-- Which channels best balance conversion efficiency and revenue impact?
-- Where do users drop off the most in the conversion funnel?
-- Which marketing channels should be deprioritized due to low impact?
+The project combines:
+- SQL-based data modeling in BigQuery
+- Python (pandas) for analytical validation and visualization
+- Business-oriented interpretation of results
+
+> Final visualization and dashboarding will be completed in Looker.
+
+---
+
+## Data & Tools
+
+- **Dataset:** Google Analytics Public Dataset
+- **SQL:** BigQuery
+- **Python:** pandas, matplotlib (Google Colab)
+- **Visualization:** Looker (in progress)
+
+---
+
+## Key Analyses
+
+### Conversion Funnel Analysis
+- Session-level funnel analysis to avoid event duplication
+- Identification of major drop-off points across funnel stages
+- Visualization of user progression from product view to purchase
+
+### Channel Performance Analysis
+- Channel-level aggregation of sessions, transactions, and revenue
+- Calculation of conversion rate and revenue per transaction
+- Comparison of efficiency versus value across marketing channels
+
+---
+
 ## Key Findings
 
-- Display generates the highest revenue per transaction, indicating high-value purchases despite relatively low transaction volume.
-- Referral delivers the highest conversion rate, showing strong efficiency but lower average order value compared to Display.
-- Organic Search and Direct channels provide stable mid-range performance, balancing traffic volume and revenue contribution.
-- Social drives a high volume of sessions but shows the lowest conversion rate and minimal revenue impact, making it a clear candidate for deprioritization.
-- Funnel analysis reveals that the largest drop-off occurs between product detail views and add-to-cart actions, highlighting early-stage friction before purchase intent.
-- A significant drop-off is also observed during checkout, suggesting potential optimization opportunities in the purchase completion process.
+- Referral channels show the highest conversion efficiency.
+- Display drives the highest revenue per transaction, indicating higher-value purchases.
+- Organic Search and Direct channels provide stable mid-range performance.
+- Social generates high traffic volume but underperforms in both conversion and revenue.
+- The largest funnel drop-off occurs between product detail views and add-to-cart actions.
+
+---
+
+## Next Steps
+
+- Build a Looker dashboard to consolidate funnel and channel performance metrics
+- Add dashboard screenshots and Looker link to this repository
+- Provide executive-level summary visualizations
