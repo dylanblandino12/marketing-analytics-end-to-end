@@ -52,8 +52,15 @@ The project combines:
 
 ---
 
-## Next Steps
+## Dashboard (Looker)
 
-- Build a Looker dashboard to consolidate funnel and channel performance metrics
-- Add dashboard screenshots and Looker link to this repository
-- Provide executive-level summary visualizations
+An interactive Looker dashboard was built to consolidate funnel and channel
+performance insights into an executive-level view.
+
+The dashboard includes:
+- A conversion funnel highlighting user drop-off across key e-commerce stages
+- Channel-level performance metrics comparing conversion efficiency and revenue per transaction
+- An executive summary with overall KPIs and a ranked comparison of marketing channels
+
+**Public Dashboard:**  
+[(https://lookerstudio.google.com/s/ud9QwXQgEjw)]
