@@ -24,7 +24,7 @@ The project combines:
 - **Dataset:** Google Analytics Public Dataset
 - **SQL:** BigQuery
 - **Python:** pandas, matplotlib (Google Colab)
-- **Visualization:** Looker (in progress)
+- **Visualization:** Looker 
 
 ---
 
@@ -64,3 +64,6 @@ The dashboard includes:
 
 **Public Dashboard:**  
 [(https://lookerstudio.google.com/s/ud9QwXQgEjw)]
+
+![Executive Summary](images/marketing_analytics_executive_summary.png)
+
